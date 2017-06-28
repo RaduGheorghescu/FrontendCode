@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HR APP-MATH</title>
+</head>
+<body>
+<div ng-app="hrApp">
+    <div ng-controller="MathController">
+        <div class="container">
+            <input type="number" ng-model="numberA">
+            <input type="number" ng-model="numberB">
+            <select name="singleSelect" ng-model="mathSelect" ng-change="doMath()">
+                <option value="1">Addition</option>
+                <option value="2">Subtraction</option>
+                <option value="3">Multiplication</option>
+                <option value="4">Division</option>
+            </select>
+            <p>Result: <span ng-bind="result"></span></p>
+        </div>
+    </div>
+</div>
+</body>
+<script type="text/javascript" src="../bower_components/jquery/jquery.js"></script>
+<script type="text/javascript" src="../bower_components/bootstrap/dist/js/bootstrap.js"></script>
+<script type="text/javascript" src="../bower_components/angular/angular.js"></script>
+<script type="text/javascript" src="../scripts/app.js"></script>
+<script type="text/javascript" src="../scripts/MathController.js"></script>
+</html>
