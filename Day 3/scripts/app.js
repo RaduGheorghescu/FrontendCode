@@ -26,6 +26,10 @@ hrApp.config(['$routeProvider', function ($routeProvider) {
             templateUrl: 'views/employeeview.html',
             controller: 'EmployeeViewController'
         })
+        .when('/user',{
+            templateUrl: 'views/userview.html',
+            controller: 'UserViewController'
+        })
 
 
         .otherwise({
