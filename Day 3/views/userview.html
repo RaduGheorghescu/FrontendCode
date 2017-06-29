@@ -1,0 +1,44 @@
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <div class="panel-body">
+            <div class="col-lg-6">
+                <div class="form-group">
+                    <label for="firstName">First Name:</label>
+                    <input id="firstName" type="text" ng-model="user.firstName" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="lastName">Last Name:</label>
+                    <input id="lastName" type="text" ng-model="user.lastName" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="age">Age:</label>
+                    <input id="age" type="number" ng-model="user.age" class="form-control">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <button ng-click="back()">Back</button>
+    <button ng-click="reset()">Reset</button>
+    <button ng-click="save()">Save</button>
+    <button ng-click="show()">Show/Hide User List</button>
+</div>
+
+<table ng-show="showHide" class="table table-striped">
+    <tr>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Age</th>
+    </tr>
+    <tr ng-repeat="user in users">
+        <td class="text-center">
+            {{user.firstName}}
+        </td>
+        <td class="text-center">
+            {{user.lastName}}
+        </td>
+        <td class="text-center">
+            {{user.age}}
+    </tr>
+</table>
